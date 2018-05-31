@@ -171,7 +171,7 @@ object in the `test_messages()` sub:
 
         $test_mq->connect unless $test_mq->connected;
 
-        # This will die!
+        # This will not die!
         my $message = $crixa->channel->queue(...)->check_for_message;
     }
 
