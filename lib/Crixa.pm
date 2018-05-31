@@ -243,7 +243,7 @@ Here's an example:
         publish($test_mq);
 
         # This will die!
-        my @messages = $crixa->channel->queue(...)->check_for_messages;
+        my $message = $crixa->channel->queue(...)->check_for_message;
     }
 
     sub publish {
@@ -273,7 +273,7 @@ object in the C<test_messages()> sub:
         $test_mq->connect unless $test_mq->connected;
 
         # This will die!
-        my @messages = $crixa->channel->queue(...)->check_for_messages;
+        my $message = $crixa->channel->queue(...)->check_for_message;
     }
 
 Of course, this is a very artificial example, but in real code you may come
